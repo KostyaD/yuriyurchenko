@@ -90,9 +90,6 @@ var Scroll = (function(){
 			}
 		}
 		scrollIt(number);
-		/*setTimeout(function(){
-			allow = true;
-		}, 50);*/
 	});
 
 	var scrollIt = function(number) {
@@ -123,11 +120,14 @@ var Nav = (function(){
 		if($('.portfolio').scrollLeft() == 0) {
 			$('.start').removeClass('faded');
 		} else {
-			$('.portfolio').animate({ scrollLeft : 0 }, 500);
+			$('.portfolio').animate({ scrollLeft : 0 }, 1000);
 		}
 	});
 	$(document).on('click', '.nav-item[data-href=works]', function(){
 		$('.start').addClass('faded');
+	});
+	$(document).on('click', '.nav-item[data-href=contacts]', function(){
+		$('.portfolio').animate({ scrollLeft : $('.portfolio-cont').width() }, 1000);
 	});
 })();
 

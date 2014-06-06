@@ -36,7 +36,7 @@
                 <ul class="nav-list">
                     <li class="nav-item" data-href="about"><a class="btn btn-bordered" href="#">About</a>
                     <li class="nav-item" data-href="works"><a class="btn btn-bordered" href="#">Works</a>
-                    <li class="nav-item"><a class="btn btn-bordered" href="#">Contacts</a>
+                    <li class="nav-item" data-href="contacts"><a class="btn btn-bordered" href="#">Contacts</a>
                 </ul>
             </nav>
             
