@@ -193,7 +193,7 @@ header {
 main {
   height: 92.4375%;
 }
-.fotorama {
+/*.fotorama {
   padding: 8% 0 0;
 }
 .fotorama__arr--prev {
@@ -220,6 +220,21 @@ main {
 }
 .fotorama__html img {
   max-width: 90%;
+}*/
+.portfolio {
+  padding: 10% 0 0;
+  width: 100%;
+  overflow: auto;
+}
+.portfolio-cont {
+  width: 20000em;
+}
+.portfolio-cont {
+  float: left;
+  text-align: center;
+}
+.carousel-item {
+  float: left;
 }
 @media screen and (max-width: 1140px) {
   .nav {

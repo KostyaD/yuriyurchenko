@@ -16,8 +16,27 @@ var App = (function(){
 	};
 })();
 
+var Carousel = (function(){
+	var $item = $('.carousel-item');
+	var $container = $('.portfolio-cont');
+
+	return {
+		init: function() {
+			$item.width( $(window).width() );
+			var width = 0;
+			$item.each( function(){
+				width += $(this).width();
+			});
+			console.log(width);
+			$container.width( width );
+		}
+	};
+})();
+
 App.init();
+Carousel.init();
 
 $(window).resize(function(){
 	App.init();
+	Carousel.init();
 });
