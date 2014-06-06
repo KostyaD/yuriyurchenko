@@ -34,8 +34,8 @@
 
             <nav class="nav">
                 <ul class="nav-list">
+                    <li class="nav-item" data-href="about"><a class="btn btn-bordered" href="#">About</a>
                     <li class="nav-item"><a class="btn btn-bordered" href="#">Works</a>
-                    <li class="nav-item"><a class="btn btn-bordered" href="#">About</a>
                     <li class="nav-item"><a class="btn btn-bordered" href="#">Contacts</a>
                 </ul>
             </nav>
@@ -56,20 +56,30 @@
             </ul>
 
         </header>
-
-        <main>            
-            <div class="fotorama" data-height="70%" data-width="100%" data-nav="false" data-fit="cover">
-                @if(is_object($pro))
-                    @foreach($pro as $prj)
-                        <div>
-                            <img src="{{URL::to('uploads/'.$prj->photo)}}">
-                            @if($prj->desc != '')
-                                <h2>{{$prj->desc}}</h2>
-                            @endif
+        <main>          
+            <div class="portfolio">
+                <div class="portfolio-cont">
+                    @if(is_object($pro))
+                        @foreach($pro as $prj)
+                            <div class="carousel-item">
+                                <img src="{{URL::to('uploads/'.$prj->photo)}}">
+                                
+                                @if($prj->desc != '')
+                                    <!--<h2>{{$prj->desc}}</h2>-->
+                                @endif
+                            </div>
+                        @endforeach
+                    @endif
+                    <div class="start">
+                        <div class="start-title">YURI YURCHENKO</div>
+                        <div class="start-text">
+                            Web / Mobile / Interface Designer / Art Director<br>
+                            I'm a mobile, web, graphic and user interface designer, with over 15 years of experience in design and brand identity development. I love to draw, create mobile apps, interfaces and websites, specialized in simple, unique, effective and user-centric design solutions.
                         </div>
-                    @endforeach
-                @endif
-            </div>       
+                    </div>
+                </div> 
+            </div>    
+            <div class="scroll"></div>  
         </main>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
