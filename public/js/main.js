@@ -113,8 +113,11 @@ var Scroll = (function(){
 
 var Nav = (function(){
 	$(document).on('click', '.nav-item[data-href=about]', function(){
-		$('.portfolio').animate({ scrollLeft : 0 }, 500);
-		$('.start').removeClass('faded');
+		if($('.portfolio').scrollLeft() == 0) {
+			$('.start').removeClass('faded');
+		} else {
+			$('.portfolio').animate({ scrollLeft : 0 }, 500);
+		}
 	});
 	$(document).on('click', '.nav-item[data-href=works]', function(){
 		$('.start').addClass('faded');

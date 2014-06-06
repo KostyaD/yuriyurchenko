@@ -416,12 +416,17 @@ main {
 }
 .start-title {
   font-size: 22px;
+  font-weight: 100;
+  letter-spacing: 1px;
 }
 .start-text {
   font-size: 16px;
   padding-top: 5%;
   max-width: 550px;
   margin: 0 auto;
+  font-weight: 100;
+  letter-spacing: 2px;
+  line-height: 28px;
 }
 
 .flipOutX {
