@@ -40,9 +40,10 @@ var Scroll = (function(){
 	$('.portfolio').on('scroll', function(){
 		if(!allow) return;
 
-		allow = false;
-		if(!$('.scroll').hasClass('active')) {
-			$('.scroll').addClass('active');
+		if($(this).scrollLeft() > 0) {
+			$('.start').addClass('faded');
+		} else {
+			$('.start').removeClass('faded');
 		}
 		var sPerc = 100 * $(this).scrollLeft()/($(this).find('.portfolio-cont').outerWidth() - $(this).outerWidth());
 		var number = 0;
@@ -56,9 +57,9 @@ var Scroll = (function(){
 			}
 		}
 		scrollIt(number);
-		setTimeout(function(){
+		/*setTimeout(function(){
 			allow = true;
-		}, 50);
+		}, 50);*/
 	});
 
 	var scrollIt = function(number) {
@@ -79,6 +80,12 @@ var Scroll = (function(){
 	}
 
 	return { init: init, scrollIt: scrollIt }
+})();
+
+var Nav = (function(){
+	$(document).on('click', '.nav-item[data-href=about]', function(){
+		$('.portfolio').animate({ scrollLeft : 0 }, 500);
+	});
 })();
 
 App.init();

@@ -34,8 +34,8 @@
 
             <nav class="nav">
                 <ul class="nav-list">
+                    <li class="nav-item" data-href="about"><a class="btn btn-bordered" href="#">About</a>
                     <li class="nav-item"><a class="btn btn-bordered" href="#">Works</a>
-                    <li class="nav-item"><a class="btn btn-bordered" href="#">About</a>
                     <li class="nav-item"><a class="btn btn-bordered" href="#">Contacts</a>
                 </ul>
             </nav>
@@ -70,6 +70,13 @@
                             </div>
                         @endforeach
                     @endif
+                    <div class="start">
+                        <div class="start-title">YURI YURCHENKO</div>
+                        <div class="start-text">
+                            Web / Mobile / Interface Designer / Art Director<br>
+                            I'm a mobile, web, graphic and user interface designer, with over 15 years of experience in design and brand identity development. I love to draw, create mobile apps, interfaces and websites, specialized in simple, unique, effective and user-centric design solutions.
+                        </div>
+                    </div>
                 </div> 
             </div>    
             <div class="scroll"></div>  
