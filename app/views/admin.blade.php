@@ -110,9 +110,7 @@
 </div>
 
 <div>
-	@foreach($pro as $pr)
-		<?php print_r($pr); ?>
-	@endforeach
+	
 </div>
 
 

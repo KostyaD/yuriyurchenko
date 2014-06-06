@@ -56,21 +56,23 @@
             </ul>
 
         </header>
-        <main>            
+        <main>          
             <div class="portfolio">
                 <div class="portfolio-cont">
                     @if(is_object($pro))
                         @foreach($pro as $prj)
                             <div class="carousel-item">
                                 <img src="{{URL::to('uploads/'.$prj->photo)}}">
+                                
                                 @if($prj->desc != '')
                                     <!--<h2>{{$prj->desc}}</h2>-->
                                 @endif
                             </div>
                         @endforeach
                     @endif
-                <div>
-            </div>       
+                </div> 
+            </div>    
+            <div class="scroll"></div>  
         </main>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
