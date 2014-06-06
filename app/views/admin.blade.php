@@ -109,6 +109,12 @@
 	<a href="#" class="pro-submit"><i class="fa fa-thumbs-up"></i></a>
 </div>
 
+<div>
+	@foreach($pro as $pr)
+		<?php print_r($pr); ?>
+	@endforeach
+</div>
+
 
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script>

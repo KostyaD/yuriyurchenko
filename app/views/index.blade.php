@@ -56,19 +56,20 @@
             </ul>
 
         </header>
-
         <main>            
-            <div class="fotorama" data-height="70%" data-width="100%" data-nav="false" data-fit="cover">
-                @if(is_object($pro))
-                    @foreach($pro as $prj)
-                        <div>
-                            <img src="{{URL::to('uploads/'.$prj->photo)}}">
-                            @if($prj->desc != '')
-                                <h2>{{$prj->desc}}</h2>
-                            @endif
-                        </div>
-                    @endforeach
-                @endif
+            <div class="portfolio">
+                <div class="portfolio-cont">
+                    @if(is_object($pro))
+                        @foreach($pro as $prj)
+                            <div class="carousel-item">
+                                <img src="{{URL::to('uploads/'.$prj->photo)}}">
+                                @if($prj->desc != '')
+                                    <!--<h2>{{$prj->desc}}</h2>-->
+                                @endif
+                            </div>
+                        @endforeach
+                    @endif
+                <div>
             </div>       
         </main>
 
