@@ -57,6 +57,7 @@ var Logos = (function(){
 			}
 		}
 	};
+})();
 
 var Scroll = (function(){
 	var amount = 30;
@@ -99,9 +100,12 @@ var Scroll = (function(){
 
 	var init = function() {
 		for(var i = 0; i < amount; i++) {
-			$('<div class="scroll-dot"></div>').appendTo('.scroll')/*.css('top', i*80/amount + '%')*/;
+			$('<div class="scroll-dot"></div>').appendTo('.scroll');
 		}
 		scrollIt(0);
+		setTimeout(function(){
+			$('.scroll-it').addClass('loaded');
+		}, 1000);
 	}
 
 	return { init: init, scrollIt: scrollIt }
@@ -110,6 +114,10 @@ var Scroll = (function(){
 var Nav = (function(){
 	$(document).on('click', '.nav-item[data-href=about]', function(){
 		$('.portfolio').animate({ scrollLeft : 0 }, 500);
+		$('.start').removeClass('faded');
+	});
+	$(document).on('click', '.nav-item[data-href=works]', function(){
+		$('.start').addClass('faded');
 	});
 })();
 

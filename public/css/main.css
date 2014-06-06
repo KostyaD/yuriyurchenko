@@ -192,6 +192,7 @@ header {
 }
 main {
   height: 92.4375%;
+  min-height: 400px;
   overflow: hidden;
   position: relative;
 }
@@ -232,7 +233,7 @@ main {
   position: absolute;
   top: 4rem;
   bottom: -10%;
-  padding-bottom: 10%;
+  padding-bottom: 11%;
 }
 .portfolio-cont {
   width: 20000em;
@@ -249,6 +250,7 @@ main {
 .carousel-item img {
   max-width: 80%;
   max-height: 100%;
+}
 
 @-webkit-keyframes flipInX {
   0% {
@@ -358,6 +360,8 @@ main {
     transform-origin: bottom center; 
     
   }
+}
+
 .scroll {
   position: absolute;
   width: 100%;
@@ -417,7 +421,6 @@ main {
   padding-top: 5%;
   max-width: 550px;
   margin: 0 auto;
->>>>>>> FETCH_HEAD
 }
 
 .flipOutX {
@@ -433,7 +436,6 @@ main {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-<<<<<<< HEAD
 
 .animated.infinite {
   -webkit-animation-iteration-count: infinite;
@@ -445,14 +447,22 @@ main {
   animation-duration: 2s;
 }
 
-=======
 .scroll-it {
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 138px;
+  height: 34px;
+  margin-top: 35px;
   background: url(../img/scroll.svg) no-repeat 0 0 / 100% 100%;
+  opacity: 0;
+  -webkit-transition: opacity 1.5s ease;
+  transition: opacity 1.5s ease;
 }
->>>>>>> FETCH_HEAD
+
+.scroll-it.loaded {
+  opacity: 1;
+}
+
+
 @media screen and (max-width: 1140px) {
   .nav {
     margin: 0 0 0 10%;

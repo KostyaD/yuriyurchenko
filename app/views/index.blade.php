@@ -27,15 +27,15 @@
             <div class="logo-group">
                 <h1>CR8IVE</h1>
                 <div>
-                    <h2 class="hidden">Art Director</h2>
-                    <h2 class="ui-designer">UI Designer</h2>
+                    <h2 class="art-director animated hidden">Art Director</h2>
+                    <h2 class="animated hidden ui-designer">UI Designer</h2>
                 </div>
             </div>
 
             <nav class="nav">
                 <ul class="nav-list">
                     <li class="nav-item" data-href="about"><a class="btn btn-bordered" href="#">About</a>
-                    <li class="nav-item"><a class="btn btn-bordered" href="#">Works</a>
+                    <li class="nav-item" data-href="works"><a class="btn btn-bordered" href="#">Works</a>
                     <li class="nav-item"><a class="btn btn-bordered" href="#">Contacts</a>
                 </ul>
             </nav>
@@ -85,8 +85,6 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="{{URL::to('js/vendor/jquery-1.10.2.min.js')}}"><\/script>')</script>
-        <script src="{{URL::to('js/plugins.js')}}"></script>
-        <script src="{{URL::to('js/vendor/fotorama.js')}}"></script>
         <script src="{{URL::to('js/main.js')}}"></script>
     </body>
 </html>
