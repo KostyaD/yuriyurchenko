@@ -59,6 +59,14 @@
         <main>          
             <div class="portfolio">
                 <div class="portfolio-cont">
+                    <div class="start">
+                        <div class="start-title">YURI YURCHENKO</div>
+                        <div class="start-text">
+                            Web / Mobile / Interface Designer / Art Director<br>
+                            I'm a mobile, web, graphic and user interface designer, with over 15 years of experience in design and brand identity development. I love to draw, create mobile apps, interfaces and websites, specialized in simple, unique, effective and user-centric design solutions.
+                        </div>
+                        <div class="scroll-it"></div>
+                    </div>
                     @if(is_object($pro))
                         @foreach($pro as $prj)
                             <div class="carousel-item">
@@ -70,14 +78,6 @@
                             </div>
                         @endforeach
                     @endif
-                    <div class="start">
-                        <div class="start-title">YURI YURCHENKO</div>
-                        <div class="start-text">
-                            Web / Mobile / Interface Designer / Art Director<br>
-                            I'm a mobile, web, graphic and user interface designer, with over 15 years of experience in design and brand identity development. I love to draw, create mobile apps, interfaces and websites, specialized in simple, unique, effective and user-centric design solutions.
-                        </div>
-                        <div class="scroll-it"></div>
-                    </div>
                 </div> 
             </div>    
             <div class="scroll"></div>  

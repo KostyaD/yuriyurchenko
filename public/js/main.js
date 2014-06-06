@@ -41,8 +41,10 @@ var Logos = (function(){
 
 	return {
 		init: function() {
-			setTimeout( function(){ $artDir.removeClass('hidden').addClass('flipInX'); }, 2500 );
-			setTimeout( function(){ $uiDes.removeClass('hidden').addClass('flipInX'); }, 5000);
+			setTimeout( function(){ $('.logo-group h1').addClass('active'); $artDir.removeClass('hidden').addClass('flipInX'); }, 2500 );
+
+			setTimeout( function(){ $curr.fadeOut(100);$uiDes.removeClass('hidden').addClass('flipInX'); }, 5000);
+			
 
 			var timer = setTimeout( function run() {
 				Logos.changeStates($uiDes);
@@ -52,8 +54,13 @@ var Logos = (function(){
 		changeStates: function(elem) {
 			if(elem.hasClass('flipInX')) {
 				elem.removeClass('flipInX').addClass('flipOutX');
+
+				$curr.fadeIn(1500);
 			} else {
 				elem.removeClass('flipOutX').addClass('flipInX');
+
+
+				$curr.fadeOut(100);
 			}
 		}
 	};

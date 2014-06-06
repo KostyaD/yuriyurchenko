@@ -43,4 +43,9 @@ class AdminController extends BaseController {
 		Project::create(Input::all());
 	}
 
+	public function postRm() {
+		Project::find(Input::get('id'))->delete();
+		return Redirect::to('admin');
+	}
+
 }

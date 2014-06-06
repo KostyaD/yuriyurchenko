@@ -91,6 +91,26 @@
 		color: #000;
 		background: #fff;
 	}
+	.prjs {
+		width: 700px;
+		margin: 50px auto 100px;
+	}
+	.prj {
+		border: 1px solid;
+		margin-bottom: 15px;
+		clear: both;
+		height: 150px;
+		overflow: hidden;
+	}
+	.prj img {
+		max-height: 300px;
+		max-width: 300px;
+		float: left;
+	}
+	.prj .info {
+		float: left;
+		margin-left: 50px;
+	}
 </style>
 
 <div class="progress-bar">
@@ -109,8 +129,18 @@
 	<a href="#" class="pro-submit"><i class="fa fa-thumbs-up"></i></a>
 </div>
 
-<div>
-	
+<div class="prjs">
+@foreach($pro as $prj)
+	<div class="prj">
+		<img src="{{URL::to('uploads/'.$prj->photo)}}">
+		<div class="info">
+			<form action="{{URL::to('admin/rm')}}" method="POST">
+				<input type="hidden" name="id" value="{{$prj->id}}">
+				<button type="submit">Удалить</button>
+			</form>
+		</div>
+	</div>
+@endforeach
 </div>
 
 
