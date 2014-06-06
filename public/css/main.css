@@ -310,6 +310,12 @@ main {
   max-width: 550px;
   margin: 0 auto;
 }
+.scroll-it {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: url(../img/scroll.svg) no-repeat 0 0 / 100% 100%;
+}
 @media screen and (max-width: 1140px) {
   .nav {
     margin: 0 0 0 10%;
